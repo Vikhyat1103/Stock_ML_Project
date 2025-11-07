@@ -1,0 +1,23 @@
+# Python / env
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Data (do not push large data files)
+data/raw/
+data/processed/*.csv
+data/processed/*.parquet
+
+# Figures (optional: you may push small images)
+figures/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
