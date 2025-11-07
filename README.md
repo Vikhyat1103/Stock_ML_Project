@@ -1,178 +1,105 @@
-\# 🧠 Comparative Study of Machine Learning Algorithms for Stock Market Prediction and Automated Trend Forecasting
+<h1 align="center">📊 Comparative Study of Machine Learning Algorithms for Stock Market Prediction and Automated Trend Forecasting</h1>
 
-
-
-\### 📚 Course: ML for Electronics  
-
-\### 👥 Team 18 — Vikhyat Pandey, Akash Ranjan, Subhrajit Kalita  
-
-
+<p align="center">
+<b>Course:</b> ML for Electronics <br>
+<b>Team 18:</b> Vikhyat Pandey · Akash Ranjan · Subhrajit Kalita <br>
+<b>Instructor:</b> Prof. [Professor’s Name]  
+</p>
 
 ---
 
+## 🧠 Abstract
+This project aims to design and evaluate an **automated machine learning pipeline** for short-term **stock market prediction and trend forecasting**.  
+We compare the performance of multiple **classical ML and deep learning algorithms** for predicting **next-day closing prices** and **directional movement (up/down)** of selected Indian equities.  
 
+Data is collected using the **Yahoo Finance API (`yfinance`)** for:
+- **Reliance Industries (RELIANCE.NS)**
+- **Tata Consultancy Services (TCS.NS)**
+- **HDFC Bank (HDFCBANK.NS)**
+- **NIFTY 50 Index (^NSEI)** – used as a contextual feature  
 
-\## 🎯 Abstract
-
-This project focuses on building an automated machine learning pipeline that compares various ML and DL algorithms for short-term stock market prediction.  
-
-The aim is to analyze and forecast next-day stock prices and movement trends (up/down) for selected Indian equities using both classical and deep learning approaches.
-
-
-
-We utilize historical OHLCV data for \*\*Reliance\*\*, \*\*TCS\*\*, and \*\*HDFC Bank\*\*, with the \*\*NIFTY Index\*\* as a contextual feature.  
-
-The pipeline includes data collection, preprocessing, feature engineering (technical indicators), exploratory analysis, target creation, model training, evaluation, and visualization.
-
-
+The pipeline includes:
+- Data Collection 📥  
+- Preprocessing & Cleaning 🧹  
+- Feature Engineering ⚙️  
+- Exploratory Data Analysis (EDA) 📈  
+- Target Creation 🎯  
+- Model Training & Evaluation 🤖  
 
 ---
 
+## 🧱 Project Structure
 
-
-\## 🧱 Project Structure
-
-
-
-Stock\_ML\_Project/
-
+```bash
+Stock_ML_Project/
 │
-
 ├── data/
-
-│ ├── raw/ # Raw downloaded CSVs (ignored in .gitignore)
-
-│ └── processed/ # Cleaned \& feature-engineered data
-
-│ ├── stocks\_clean.csv
-
-│ ├── stocks\_features.csv
-
-│ ├── reliance\_model\_ready.csv
-
-│ ├── tcs\_model\_ready.csv
-
-│ └── hdfcbank\_model\_ready.csv
-
+│   ├── raw/                  # Raw data downloaded using yfinance
+│   └── processed/            # Cleaned and feature-engineered datasets
+│       ├── stocks_clean.csv
+│       ├── stocks_features.csv
+│       ├── reliance_model_ready.csv
+│       ├── tcs_model_ready.csv
+│       └── hdfcbank_model_ready.csv
 │
-
-├── notebooks/ # Jupyter notebooks for each phase
-
-│ ├── 01\_data\_collection.ipynb
-
-│ ├── 02\_preprocessing.ipynb
-
-│ ├── 03\_feature\_engineering.ipynb
-
-│ ├── 03A\_EDA.ipynb
-
-│ └── 04\_target\_creation.ipynb
-
+├── notebooks/                # Jupyter notebooks (each stage of the pipeline)
+│   ├── 01_data_collection.ipynb
+│   ├── 02_preprocessing.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   ├── 03A_EDA.ipynb
+│   └── 04_target_creation.ipynb
 │
-
-├── figures/ # Visualization and EDA plots
-
-│ └── EDA/
-
-│ ├── price\_trends.png
-
-│ ├── returns\_distribution.png
-
-│ ├── moving\_averages.png
-
-│ ├── RSI.png
-
-│ └── correlation\_heatmap.png
-
+├── figures/                  # Visualizations & EDA plots
+│   └── EDA/
+│       ├── price_trends.png
+│       ├── returns_distribution.png
+│       ├── moving_averages.png
+│       ├── RSI.png
+│       └── correlation_heatmap.png
 │
-
-├── src/ # Future pipeline code modules
-
-│ ├── data\_download.py
-
-│ ├── preprocessing.py
-
-│ └── feature\_engineering.py
-
+├── src/                      # Scripts for reusable code (pipeline ready)
+│   ├── data_download.py
+│   ├── preprocessing.py
+│   └── feature_engineering.py
 │
+├── requirements.txt          # Python dependencies
+├── .gitignore                # Ignore raw/large data and environment files
+└── README.md                 # Project documentation
+```
 
-├── requirements.txt # Python dependencies
+## ⚙️ **Technologies Used**
 
-├── .gitignore # Ignore large/raw data and system files
-
-└── README.md # Project overview and documentation
-
-
-
-
+- **Language:** Python  
+- **Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `yfinance`  
+- **Environment:** Jupyter Notebook / VS Code  
+- **Version Control:** Git + GitHub  
 
 ---
 
+## 🚀 **Current Progress (Mid-Sem)**
 
-
-\## ⚙️ Technologies Used
-
-\- \*\*Language:\*\* Python  
-
-\- \*\*Libraries:\*\* `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `yfinance`  
-
-\- \*\*Environment:\*\* Jupyter Notebook / VS Code  
-
-\- \*\*Version Control:\*\* Git + GitHub  
-
-
+✅ **Data Collection**  
+✅ **Data Cleaning & Preprocessing**  
+✅ **Feature Engineering:** MA, EMA, RSI, Returns  
+✅ **EDA & Visualization**  
+✅ **Target Creation & Train-Test Split**  
 
 ---
 
+## 🔮 **Future Work (Post-Midsem)**
 
-
-\## 🚀 Current Progress (Mid-Sem)
-
-✅ Data Collection  
-
-✅ Data Cleaning \& Preprocessing  
-
-✅ Feature Engineering (MA, EMA, RSI, Returns)  
-
-✅ EDA \& Visualization  
-
-✅ Target Creation \& Train-Test Split  
-
-
+- 🔹 Train regression models — *Linear, Random Forest, SVR, XGBoost*  
+- 🔹 Train classification models — *Logistic, KNN, Random Forest, SVM*  
+- 🔹 Add deep learning models — *MLP, CNN, LSTM*  
+- 🔹 Evaluate & compare models on **RMSE, MAE, Accuracy, F1, Directional Accuracy**  
+- 🔹 Build automated prediction pipeline and simple demo app (*Streamlit*)  
+- 🔹 Write final report, video presentation, and documentation  
 
 ---
 
+## 🏗️ **How to Reproduce**
 
-
-\## 🔮 Future Work (Post-Midsem)
-
-\- Train regression models (Linear, Random Forest, SVR, XGBoost)
-
-\- Train classification models (Logistic, KNN, Random Forest, SVM)
-
-\- Add deep learning (MLP, CNN, LSTM)
-
-\- Evaluate \& compare models on RMSE, MAE, Accuracy, F1, Directional Accuracy
-
-\- Build automated prediction pipeline and simple demo app (Streamlit)
-
-\- Write final report, video presentation, and project documentation
-
-
-
----
-
-
-
-\## 🏗️ How to Reproduce
-
-1\. Clone the repository:
-
-&nbsp;  ```bash
-
-&nbsp;  git clone https://github.com/Vikhyat1103/Stock\_ML\_Project.git
-
-&nbsp;  cd Stock\_ML\_Project
-
-
-
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Vikhyat1103/Stock_ML_Project.git
+   cd Stock_ML_Project
