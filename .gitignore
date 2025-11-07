@@ -7,13 +7,17 @@ __pycache__/
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
-# Data (do not push large data files)
-data/raw/
-data/processed/*.csv
+# Ignore large raw data but keep small CSVs
+data/raw/*
+!data/raw/sample_data.csv
+
+# Allow processed datasets (for report)
+!data/processed/
 data/processed/*.parquet
 
-# Figures (optional: you may push small images)
-figures/
+# Allow all figures (EDA plots)
+!figures/
+!figures/EDA/
 
 # OS
 .DS_Store
