@@ -3,7 +3,7 @@
 <p align="center">
 <b>Course:</b> ML for Electronics <br>
 <b>Team 18:</b> Vikhyat Pandey · Akash Ranjan · Subhrajit Kalita <br>
-<b>Instructor:</b> Prof. [Professor’s Name]  
+<b>Instructor:</b> Prof. Shivin Srivastava  
 </p>
 
 ---
